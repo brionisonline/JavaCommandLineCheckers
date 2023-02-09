@@ -12,7 +12,7 @@ public class Board {
         if (!isBoardCreated) {
             int x = 0;
             int location;
-            //2. enhanced for loop requirement
+
             for (Square[] row : board) {
                 int y = 0;
                 for (Square col : row) {
@@ -82,6 +82,20 @@ public class Board {
             System.out.println();
         }
     }   
+    // void printBoard() {
+    //     System.out.print("  ");
+    //     for (int i = 97; i < 105; i++) {
+    //         System.out.print((char)i + " ");
+    //     }
+    //     System.out.println();
+    //     for (int x = 8; x > 0; x--) {
+    //         System.out.print(x + " ");
+    //         for (int y = 97; y < 105; y++) {
+    //             System.out.print(board[x-1][y-97].getPopulation() + " ");
+    //         }
+    //         System.out.println();
+    //     }
+    // } 
     
     
 }
