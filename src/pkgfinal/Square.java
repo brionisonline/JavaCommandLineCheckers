@@ -1,90 +1,82 @@
 package pkgfinal;
-
 public class Square {
-// 5. attribute minimum met
-
-    private int Location;
-    private boolean IsBlack;
-    private boolean IsPopulated;
-    private boolean IsPlayerPopulated;
-    private boolean IsKing;
-    public char Population;
-
-    Square() {
-
-    }
+    private int location;
+    private boolean isBlack;
+    private boolean isPopulated;
+    private boolean isPlayerPopulated;
+    private boolean isKing;
+    private char population;
 
     Square(int location, boolean isBlack, boolean isPopulated, boolean isPlayerPopulated, boolean isKing) {
-        Location = location;
-        IsBlack = isBlack;
-        IsPopulated = isPopulated;
-        IsPlayerPopulated = isPlayerPopulated;
-        IsKing = isKing;
-        if (IsPopulated) {
-            if (IsPlayerPopulated) {
-                if (IsKing) {
-                    Population = 'O';
+        setLocation(location);
+        setIsBlack(isBlack);
+        setIsPopulated(isPopulated);
+        setIsPlayerPopulated(isPlayerPopulated);
+        setIsKing(isKing);
+        if (isPopulated) {
+            if (isPlayerPopulated) {
+                if (isKing) {
+                    population = 'O';
                 } else {
-                    Population = 'o';
+                    population = 'o';
                 }
             } else {
-                if (IsKing) {
-                    Population = 'X';
+                if (isKing) {
+                    population = 'X';
                 } else {
-                    Population = 'x';
+                    population = 'x';
                 }
             }
         } else {
-            Population = ' ';
+            population = ' ';
         }
     }
 
+    public int getLocation() {
+        return location;
+    }
+
+    public void setLocation(int location) {
+        this.location = location;
+    }
+
+    public boolean getIsBlack() {
+        return isBlack;
+    }
+
+    public void setIsBlack(boolean isBlack) {
+        this.isBlack = isBlack;
+    }
+
+    public boolean getIsPopulated() {
+        return isPopulated;
+    }
+
+    public void setIsPopulated(boolean isPopulated) {
+        this.isPopulated = isPopulated;
+    }
+
+    public boolean getIsPlayerPopulated() {
+        return isPlayerPopulated;
+    }
+
+    public void setIsPlayerPopulated(boolean isPlayerPopulated) {
+        this.isPlayerPopulated = isPlayerPopulated;
+    }
+
     public boolean getIsKing() {
-        return IsKing;
+        return isKing;
     }
 
-    public void setIsKing(boolean IsKing) {
-        this.IsKing = IsKing;
+    public void setIsKing(boolean isKing) {
+        this.isKing = isKing;
     }
 
-    void setLocation(int location) {
-        Location = location;
+    public char getPopulation() {
+        return population;
     }
 
-    void setIsBlack(boolean isBlack) {
-        IsBlack = isBlack;
+    public void setPopulation(char population) {
+        this.population = population;
     }
-
-    void setIsPopulated(boolean isPopulated) {
-        IsPopulated = isPopulated;
-    }
-
-    void setIsPlayerPopulated(boolean isPlayerPopulated) {
-        IsPlayerPopulated = isPlayerPopulated;
-    }
-
-    void setPopulation(char population) {
-        Population = population;
-    }
-
-    int getLocation() {
-        return Location;
-    }
-
-    boolean getIsBlack() {
-        return IsBlack;
-    }
-
-    boolean getIsPopulated() {
-        return IsPopulated;
-    }
-
-    boolean getIsPlayerPopulated() {
-        return IsPlayerPopulated;
-    }
-
-    char getPopulation() {
-        return Population;
-    }
-
 }
